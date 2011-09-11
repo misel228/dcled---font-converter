@@ -1,0 +1,18 @@
+DC LED font converter
+
+This small tool helps creating a font file for the dcled project.
+
+This prject can be found at
+http://www.last-outpost.com/~malakai/dcled/
+
+To convert the existing font to a png copy the content from the dcled.c to a
+TXT-file. Then run
+
+php font_convert.php -i txt -f your_txt_file.txt -o png -F font.png
+
+Then use any graphics editor to edit the font.png and afterwards run
+
+php font_convert.php -i png -f png -o txt -F new_font.txt
+
+and copy the content into the initfont1 function and recompile the dcled
+project.
